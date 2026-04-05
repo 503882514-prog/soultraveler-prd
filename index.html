@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>心流旅人 SoulTraveler - 产品需求文档</title>
+  <meta name="description" content="AI×游戏化×正念冥想 - 产品需求文档 PRD">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ========== HERO ========== -->
+  <section id="hero" class="hero">
+    <div class="hero-stars" id="heroStars"></div>
+    <div class="hero-content">
+      <div class="hero-badge">📄 Product Requirements Document · V1.0</div>
+      <h1 class="hero-title">
+        <span class="title-cn">心流旅人</span>
+        <span class="title-en">SoulTraveler</span>
+      </h1>
+      <p class="hero-slogan">"每一次专注，都是一次远行。"</p>
+      <div class="hero-tags">
+        <span class="tag">🤖 AI 驱动</span>
+        <span class="tag">🎮 游戏化</span>
+        <span class="tag">🧘 正念冥想</span>
+      </div>
+      <div class="hero-meta">
+        <span>产品阶段：MVP</span>
+        <span>目标平台：微信小程序</span>
+        <span>文档日期：2025年4月</span>
+      </div>
+      <a href="#chapter1" class="hero-cta" id="startReading">开始阅读 <span class="arrow-down">↓</span></a>
+    </div>
+    <div class="hero-yunbao" id="heroYunbao">☁️</div>
+  </section>
+
+  <!-- ========== 侧边导航 ========== -->
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-logo">🧭 目录导航</div>
+    <ul class="sidebar-nav">
+      <li><a href="#chapter1" class="nav-link active" data-chapter="1">1. 产品概述</a></li>
+      <li><a href="#chapter2" class="nav-link" data-chapter="2">2. 市场分析</a></li>
+      <li><a href="#chapter3" class="nav-link" data-chapter="3">3. 用户研究</a></li>
+      <li><a href="#chapter4" class="nav-link" data-chapter="4">4. 产品架构</a></li>
+      <li><a href="#chapter5" class="nav-link" data-chapter="5">5. 功能设计</a></li>
+      <li><a href="#chapter6" class="nav-link" data-chapter="6">6. AI 技术架构</a></li>
+      <li><a href="#chapter7" class="nav-link" data-chapter="7">7. 非功能需求</a></li>
+      <li><a href="#chapter8" class="nav-link" data-chapter="8">8. 内容架构</a></li>
+      <li><a href="#chapter9" class="nav-link" data-chapter="9">9. 数据埋点</a></li>
+      <li><a href="#chapter10" class="nav-link" data-chapter="10">10. 商业模式</a></li>
+      <li><a href="#chapter11" class="nav-link" data-chapter="11">11. 版本规划</a></li>
+      <li><a href="#chapter12" class="nav-link" data-chapter="12">12. 技术架构</a></li>
+      <li><a href="#chapter13" class="nav-link" data-chapter="13">13. 风险评估</a></li>
+      <li><a href="#appendix" class="nav-link" data-chapter="14">📱 产品Demo</a></li>
+    </ul>
+  </nav>
+
+  <!-- ========== 移动端顶部 ========== -->
+  <div class="mobile-header" id="mobileHeader">
+    <button class="menu-btn" id="menuBtn">☰</button>
+    <span class="mobile-title">心流旅人 PRD</span>
+  </div>
+
+  <!-- ========== 主内容 ========== -->
+  <main class="main-content" id="mainContent">
+
+    <!-- ===== 第1章 ===== -->
+    <section id="chapter1" class="chapter">
+      <div class="chapter-header">
+        <span class="chapter-number">01</span>
+        <h2 class="chapter-title">产品概述</h2>
+        <p class="chapter-subtitle">从一个洞察开始，重新定义"专注"的体验</p>
+      </div>
+
+      <div class="content-card" data-aos="fade-up">
+        <h3>1.1 产品背景</h3>
+        <div class="insight-box">
+          <div class="insight-icon">💡</div>
+          <div class="insight-text">
+            <strong>核心洞察：</strong>当代职场人长期困于办公室的格子间，面临<mark>注意力分散</mark>、<mark>情绪焦虑</mark>、<mark>缺乏新鲜感</mark>三重困境。现有番茄钟产品均以"工具属性"为核心，缺乏叙事性与情感连接，导致用户新鲜感快速衰减、留存率低下。
+          </div>
+        </div>
+        <p>心流旅人立足于"正念冥想×游戏化探索"的跨界融合，以<strong>"专注即远行"</strong>为核心理念，让用户通过番茄钟专注积累灵魂能量，解锁丝绸之路上的世界城市，在云环游世界中收集独特的文化物件，构建一段属于自己的灵魂旅程。</p>
+      </div>
+
+      <div class="content-card" data-aos="fade-up">
+        <h3>1.2 产品定义</h3>
+        <div class="definition-grid">
+          <div class="def-item">
+            <div class="def-label">产品名称</div>
+            <div class="def-value">心流旅人（SoulTraveler）</div>
+          </div>
+          <div class="def-item">
+            <div class="def-label">一句话定义</div>
+            <div class="def-value">一款将番茄钟专注与世界探索游戏化融合的正念冥想应用</div>
+          </div>
+          <div class="def-item">
+            <div class="def-label">产品类型</div>
+            <div class="def-value">工具 + 轻度游戏化应用</div>
+          </div>
+          <div class="def-item">
+            <div class="def-label">目标平台</div>
+            <div class="def-value">微信小程序（首发）</div>
+          </div>
+          <div class="def-item">
+            <div class="def-label">核心技术</div>
+            <div class="def-value">AI 内容生成 × 场景化白噪音 × 游戏化系统</div>
+          </div>
+          <div class="def-item">
+            <div class="def-label highlight">核心壁垒</div>
+            <div class="def-value highlight">叙事内容深度 + AI生产效率 + 情感连接构建的用户粘性</div>
+          </div>
+          <div class="def-item full-width">
+            <div class="def-label">Slogan</div>
+            <div class="def-value slogan">"每一次专注，都是一次远行。"</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-card" data-aos="fade-up">
+        <h3>1.3 为什么是现在？（Why Now）</h3>
+        <p class="section-intro">四股力量在2025年交汇，共同催生了"叙事驱动型专注产品"的窗口期：</p>
+        <div class="why-now-grid">
+          <div class="why-card">
+            <div class="why-front">
+              <div class="why-icon">🤖</div>
+              <div class="why-label">AI内容生产革命</div>
+            </div>
+            <div class="why-back">Midjourney、GPT-4等生成式AI成熟，内容生产成本降低95%以上。一个人即可完成10座城市全套插画+文案，传统团队需5-10人3个月。</div>
+          </div>
+          <div class="why-card">
+            <div class="why-front">
+              <div class="why-icon">💬</div>
+              <div class="why-label">小程序生态成熟</div>
+            </div>
+            <div class="why-back">微信小程序日活超6亿，即用即走+社交传播基础设施完善。零下载门槛，朋友圈分享即获客。</div>
+          </div>
+          <div class="why-card">
+            <div class="why-front">
+              <div class="why-icon">✈️</div>
+              <div class="why-label">精神旅行需求爆发</div>
+            </div>
+            <div class="why-back">携程"云旅游"搜索量同比增长320%，年轻人对"精神出走"的需求强烈。"身体在格子间，灵魂去远方"。</div>
+          </div>
+          <div class="why-card">
+            <div class="why-front">
+              <div class="why-icon">💰</div>
+              <div class="why-label">情绪价值付费崛起</div>
+            </div>
+            <div class="why-back">Z世代为"情绪价值"付费意愿是上一代的2.3倍。产品的文化叙事和旅途情感连接天然契合付费心理。</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-card" data-aos="fade-up">
+        <h3>1.4 产品愿景</h3>
+        <div class="vision-box">
+          <div class="vision-icon">🌟</div>
+          <p>我们希望重新定义"专注"的体验——不是痛苦的自律，而是一场充满惊喜的灵魂远行。用户每完成一次番茄钟，不只是多了25分钟的效率，还多了一段旅途记忆、一个文化故事、一份属于自己的旅行手账。</p>
+        </div>
+      </div>
+
+      <div class="content-card" data-aos="fade-up">
+        <h3>1.5 核心假设与验证目标</h3>
+        <div class="hypothesis-box">
+          <div class="hypothesis-label">💡 核心假设</div>
+          <p class="hypothesis-text">用户愿意为了"探索下一个城市"而持续完成番茄钟专注——即<strong>"好奇心驱动的专注"</strong>是否成立。</p>
+        </div>
+        <div class="metrics-grid">
+          <div class="metric-item">
+            <div class="metric-label">解锁第2城市的用户占比</div>
+            <div class="metric-bar"><div class="metric-fill" data-target="70"></div></div>
+            <div class="metric-value">目标 ≥ 70%</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-label">走完全10个城市的用户占比</div>
+            <div class="metric-bar"><div class="metric-fill" data-target="20"></div></div>
+            <div class="metric-value">目标 ≥ 20%</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-label">日均番茄数（对比普通番茄钟）</div>
+            <div class="metric-bar"><div class="metric-fill" data-target="30"></div></div>
+            <div class="metric-value">提升 ≥ 30%</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-label">单次冥想完成率</div>
+            <div class="metric-bar"><div class="metric-fill" data-target="85"></div></div>
+            <div class="metric-value">目标 ≥ 85%</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-label">7日留存率</div>
+            <div class="metric-bar"><div class="metric-fill" data-target="40"></div></div>
+            <div class="metric-value">目标 ≥ 40%</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 第2章 ===== -->
+    <section id="chapter2" class="chapter">
+      <div class="chapter-header">
+        <span class="chapter-number">02</span>
+        <h2 class="chapter-title">市场分析与竞品研究</h2>
+        <p class="chapter-subtitle">65亿美元市场中的差异化机会</p>
+      </div>
+
+      <div class="content-card" data-aos="fade-up">
+        <h3>2.1 市场环境</h3>
+        <p>全球正念冥想市场规模持续增长，2024年约52亿美元，预计2030年达到约165亿美元，年复合增长率约18%。中国专注力工具市场用户规模在2024年突破1亿。</p>
+        <p>然而市场充斥同质化产品。Forest应用商店评论中，<mark>"无聊""没新鲜感""用几天就卸了"</mark>相关差评占负面评价的38%。</p>
+      </div>
+
+      <div class="content-card" data-aos="fade-up">
+        <h3>2.2 市场规模漏斗</h3>
+        <div class="funnel-container" id="marketFunnel">
+          <div class="funnel-layer" data-width="100">
+            <div class="funnel-bar" style="width:0%">
+              <span class="funnel-label">TAM 总可及市场</span>
+              <span class="funnel-number">~1.2亿</span>
+            </div>
+            <div class="funnel-desc">中国冥想/专注工具全量用户</div>
+          </div>
+          <div class="funnel-layer" data-width="65">
+            <div class="funnel-bar" style="width:0%">
+              <span class="funnel-label">SAM 可服务市场</span>
+              <span class="funnel-number">~3000万</span>
+            </div>
+            <div class="funnel-desc">20-35岁、对情感化产品有偏好的用户</div>
+          </div>
+          <div class="funnel-layer" data-width="25">
+            <div class="funnel-bar" style="width:0%">
+              <span class="funnel-label">SOM 可获得市场</span>
+              <span class="funnel-number">~50-100万</span>
+            </div>
+            <div class="funnel-desc">MVP阶段通过微信生态可触达的用户</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-card" data-aos="fade-up">
+        <h3>2.3 竞品分析</h3>
+        <div class="radar-tabs">
+          <button class="radar-tab active" data-product="soultraveler">心流旅人</button>
+          <button class="radar-tab" data-product="forest">Forest</button>
+          <button class="radar-tab" data-product="tide">潮汐</button>
+          <button class="radar-tab" data-product="sleep">小睡眠</button>
+        </div>
+        <div class="radar-container">
+          <canvas id="radarChart" width="400" height="400"></canvas>
+        </div>
+        <div class="radar-legend" id="radarLegend">
+          <p class="radar-summary">心流旅人在<strong>游戏化深度</strong>、<strong>情感连接</strong>和<strong>长期留存驱动</strong>三个维度显著领先竞品。</p>
+        </div>
+      </div>
+
+      <div class="content-card" data-aos="fade-up">
+        <h3>2.4 差异化竞争优势</h3>
+        <div class="advantage-grid">
+          <div class="adv-card" data-aos="fade-up">
+            <div class="adv-icon">📖</div>
+            <div class="adv-title">叙事驱动型专注</div>
+            <div class="adv-desc">将番茄钟从"计时工具"升维为"灵魂旅行叙事线"，每次专注都是故事的一部分</div>
+          </div>
+          <div class="adv-card" data-aos="fade-up">
+            <div class="adv-icon">🏛️</div>
+            <div class="adv-title">文化深度内容壁垒</div>
+            <div class="adv-desc">10城×30事件×35收集物，构成强大的内容护城河</div>
+          </div>
+          <div class="adv-card" data-aos="fade-up">
+            <div class="adv-icon">💌</div>
+            <div class="adv-title">情感化社交传播</div>
+            <div class="adv-desc">旅行手账、明信片、印记系统构成零成本传播素材</div>
+          </div>
+          <div class="adv-card" data-aos="fade-up">
+            <div class="adv-icon">🤖</div>
+            <div class="adv-title">AI技术赋能</div>
+            <div class="adv-desc">AI生成城市插画、探索文案，大幅降低内容生产成本</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 第3章 ===== -->
+    <section id="chapter3" class="chapter">
+      <div class="chapter-header">
+        <span class="chapter-number">03</span>
+        <h2 class="chapter-title">用户研究</h2>
+        <p class="chapter-subtitle">不是缺"计时工具"，是缺"打开工具的理由"</p>
+      </div>
+
+      <div class="content-card" data-aos="fade-up">
+        <h3>3.1 调研方法与数据来源</h3>
+        <div class="research-grid">
+          <div class="research-card">
+            <div class="research-icon">📊</div>
+            <div class="research-method">竞品评论分析</div>
+            <div class="research-sample">500条评论</div>
+            <div class="research-finding">负面评价中"无聊/没新鲜感"占比<strong>38%</strong></div>
+          </div>
+          <div class="research-card">
+            <div class="research-icon">📱</div>
+            <div class="research-method">社交媒体分析</div>
+            <div class="research-sample">300条小红书笔记</div>
+            <div class="research-finding">"坚持不下去"是高频词，"探索类"内容互动率高<strong>3倍</strong></div>
+          </div>
+          <div class="research-card">
+            <div class="research-icon">🎤</div>
+            <div class="research-method">用户深度访谈</div>
+            <div class="research-sample">6人（25-32岁）</div>
+            <div class="research-finding"><strong>5/6</strong>表示"解锁新东西会更有动力"</div>
+          </div>
+          <div class="research-card">
+            <div class="research-icon">📝</div>
+            <div class="research-method">问卷调研</div>
+            <div class="research-sample">86份有效问卷</div>
+            <div class="research-finding"><strong>83%</strong>愿意尝试"有故事线的专注工具"</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-card" data-aos="fade-up">
+        <h3>3.2 用户画像（Persona）</h3>
+        <div class="persona-grid">
+          <div class="persona-card" id="persona1">
+            <div class="persona-header" onclick="togglePersona('persona1')">
+              <div class="persona-avatar">👨‍💻</div>
+              <div class="persona-brief">
+                <div class="persona-name">小林 | 25岁</div>
+                <div class="persona-role">互联网产品运营</div>
+                <div class="persona-quote">"种了3棵树，然后呢？没有然后了。"</div>
+              </div>
+              <div class="persona-toggle">+</div>
+            </div>
+            <div class="persona-detail">
+              <div class="persona-row"><span class="persona-label">日常</span>每天对着电脑10小时，需求评审和数据报告交替轰炸</div>
+              <div class="persona-row"><span class="persona-label">痛点</span>试过Forest第3天就卸了，没有持续动力</div>
+              <div class="persona-row"><span class="persona-label">期望</span>"如果专注能让我'去'一个地方，我愿意坚持"</div>
+              <div class="persona-row"><span class="persona-label">场景</span>工作日上午2个番茄钟、午休1个、下午2个</div>
+              <div class="persona-row"><span class="persona-label">付费</span>坚持1个月后愿意花15元/月解锁新路线</div>
+            </div>
+          </div>
+          <div class="persona-card" id="persona2">
+            <div class="persona-header" onclick="togglePersona('persona2')">
+              <div class="persona-avatar">👩‍🎨</div>
+              <div class="persona-brief">
+                <div class="persona-name">阿雯 | 28岁</div>
+                <div class="persona-role">自由插画师</div>
+                <div class="persona-quote">"我需要仪式感才能开始工作。"</div>
+              </div>
+              <div class="persona-toggle">+</div>
+            </div>
+            <div class="persona-detail">
+              <div class="persona-row"><span class="persona-label">日常</span>在家办公，最大敌人是手机和沙发</div>
+              <div class="persona-row"><span class="persona-label">痛点</span>潮汐白噪音听两天就腻了，缺乏新鲜感</div>
+              <div class="persona-row"><span class="persona-label">期望</span>"每次打开都是不同城市的声音和画面"</div>
+              <div class="persona-row"><span class="persona-label">场景</span>早晨起床后第1个番茄钟启动工作模式</div>
+              <div class="persona-row"><span class="persona-label">付费</span>喜欢收集物美术，愿意为限定收集物付费</div>
+            </div>
+          </div>
+          <div class="persona-card" id="persona3">
+            <div class="persona-header" onclick="togglePersona('persona3')">
+              <div class="persona-avatar">👨‍💼</div>
+              <div class="persona-brief">
+                <div class="persona-name">老赵 | 31岁</div>
+                <div class="persona-role">金融分析师</div>
+                <div class="persona-quote">"25分钟同时冥想+旅行，效率很高。"</div>
+              </div>
+              <div class="persona-toggle">+</div>
+            </div>
+            <div class="persona-detail">
+              <div class="persona-row"><span class="persona-label">日常</span>高压工作，加班到10点是常态</div>
+              <div class="persona-row"><span class="persona-label">痛点</span>想冥想但觉得太玄，想旅行但没时间</div>
+              <div class="persona-row"><span class="persona-label">期望</span>"如果两件事能合一，值得试"</div>
+              <div class="persona-row"><span class="persona-label">场景</span>午休固定1个番茄钟、加班间隙偷1个</div>
+              <div class="persona-row"><span class="persona-label">付费</span>对价格不敏感，确认有效会买年度会员</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-card" data-aos="fade-up">
+        <h3>3.3 用户痛点分析</h3>
+        <div class="accordion" id="painPoints">
+          <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+              <span class="accordion-icon">🔴</span>
+              <span class="accordion-title">核心痛点：专注动力不足，番茄钟完成率低</span>
+              <span class="accordion-arrow">▶</span>
+            </div>
+            <div class="accordion-body">
+              <div class="pain-compare">
+                <div class="pain-current"><strong>现有方案：</strong>种树/打卡奖励 → 新鲜感3天消退</div>
+                <div class="pain-arrow">→</div>
+                <div class="pain-ours"><strong>我们的解法：</strong>探索新城市的好奇心驱动，内容持续更新</div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+              <span class="accordion-icon">🔴</span>
+              <span class="accordion-title">核心痛点：专注工具新鲜感快速衰减</span>
+              <span class="accordion-arrow">▶</span>
+            </div>
+            <div class="accordion-body">
+              <div class="pain-compare">
+                <div class="pain-current"><strong>现有方案：</strong>无解决方案，用户沉默流失</div>
+                <div class="pain-arrow">→</div>
+                <div class="pain-ours"><strong>我们的解法：</strong>持续解锁新地点、新故事、新收集物，10城×30事件</div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+              <span class="accordion-icon">🟠</span>
+              <span class="accordion-title">重要痛点：工作压力大但无减压出口</span>
+              <span class="accordion-arrow">▶</span>
+            </div>
+            <div class="accordion-body">
+              <div class="pain-compare">
+                <div class="pain-current"><strong>现有方案：</strong>冥想App功能单一，缺乏沉浸感</div>
+                <div class="pain-arrow">→</div>
+                <div class="pain-ours"><strong>我们的解法：</strong>场景化冥想+城市白噪音，身临其境的减压体验</div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+              <span class="accordion-icon">🟡</span>
+              <span class="accordion-title">次要痛点：想旅行但没有时间和钱</span>
+              <span class="accordion-arrow">▶</span>
+            </div>
+            <div class="accordion-body">
+              <div class="pain-compare">
+                <div class="pain-current"><strong>现有方案：</strong>旅游短视频，被动观看无参与感</div>
+                <div class="pain-arrow">→</div>
+                <div class="pain-ours"><strong>我们的解法：</strong>主动探索式云旅行，强参与感，每次专注都在前进</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-card" data-aos="fade-up">
+        <h3>3.4 用户旅程地图（典型一天）</h3>
+        <div class="journey-timeline">
+          <div class="journey-item">
+            <div class="journey-time">09:15</div>
+            <div class="journey-dot"></div>
+            <div class="journey-content">
+              <div class="journey-scene">🏢 开始工作</div>
+              <div class="journey-action">启动第一个番茄钟</div>
+              <div class="journey-feedback">角色在撒马尔罕清真寺前打坐，背景音为沙漠集市远声</div>
+            </div>
+          </div>
+          <div class="journey-item">
+            <div class="journey-time">09:40</div>
+            <div class="journey-dot"></div>
+            <div class="journey-content">
+              <div class="journey-scene">☕ 休息5分钟</div>
+              <div class="journey-action">获得钥匙碎片，触发随机事件</div>
+              <div class="journey-feedback">"你在集市遇到了一位香料商人…" 获得孜然香料瓶</div>
+            </div>
+          </div>
+          <div class="journey-item">
+            <div class="journey-time">12:30</div>
+            <div class="journey-dot"></div>
+            <div class="journey-content">
+              <div class="journey-scene">🍜 午休</div>
+              <div class="journey-action">给好友寄明信片</div>
+              <div class="journey-feedback">附赠一份刚收到的烤馕，写道"这个馕比公司食堂好吃"</div>
+            </div>
+          </div>
+          <div class="journey-item">
+            <div class="journey-time">15:00</div>
+            <div class="journey-dot"></div>
+            <div class="journey-content">
+              <div class="journey-scene">💼 下午工作</div>
+              <div class="journey-action">继续番茄钟，解锁下一站</div>
+              <div class="journey-feedback">灵魂来到伊斯法罕，黄昏时看到波斯风的夕阳</div>
+            </div>
+          </div>
+          <div class="journey-item">
+            <div class="journey-time">18:00</div>
+            <div class="journey-dot"></div>
+            <div class="journey-content">
+              <div class="journey-scene">🌆 下班前</div>
+              <div class="journey-action">在今天到过的城市留下印记</div>
+              <div class="journey-feedback">拍下工位咖啡，写下"需求又改了，但波斯蓝很治愈"</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 第4章 ===== -->
+    <section id="chapter4" class="chapter">
+      <div class="chapter-header">
+        <span class="chapter-number">04</span>
+        <h2 class="chapter-title">产品架构与核心流程</h2>
+        <p class="chapter-subtitle">好奇心是最好的正反馈</p>
+      </div>
+
+      <div class="content-card" data-aos="fade-up">
+        <h3>4.1 产品核心循环</h3>
+        <div class="cycle-container" id="coreLoop">
+          <div class="cycle-ring">
+            <div class="cycle-node" data-step="1"><div class="node-icon">🧘</div><div class="node-label">专注打坐</div><div class="node-tooltip">完成番茄钟冥想</div></div>
+            <div class="cycle-node" data-step="2"><div class="node-icon">🔑</div><div class="node-label">积攒碎片</div><div class="node-tooltip">获得钥匙碎片奖励</div></div>
+            <div class="cycle-node" data-step="3"><div class="node-icon">🗺️</div><div class="node-label">解锁新城</div><div class="node-tooltip">碎片聚合为钥匙，解锁下一站</div></div>
+            <div class="cycle-node" data-step="4"><div class="node-icon">🏛️</div><div class="node-label">探索收集</div><div class="node-tooltip">城市探索事件，收集文化物件</div></div>
+            <div class="cycle-node" data-step="5"><div class="node-icon">✨</div><div class="node-label">好奇心驱动</div><div class="node-tooltip">"下一个城市是什么？"驱动再次专注</div></div>
+          </div>
+          <div class="cycle-center"><div class="cycle-pulse"></div><span>🔄</span></div>
+        </div>
+      </div>
+
+      <div class="content-card" data-aos="fade-up">
+        <h3>4.2 信息架构（MVP版本）</h3>
+        <div class="arch-tabs">
+          <button class="arch-tab active" onclick="switchArch(this,'arch-meditation')">🧘 冥想（首页）</button>
+          <button class="arch-tab" onclick="switchArch(this,'arch-map')">🗺️ 地图</button>
+          <button class="arch-tab" onclick="switchArch(this,'arch-journal')">📖 手账</button>
+          <button class="arch-tab" onclick="switchArch(this,'arch-profile')">👤 我的</button>
+        </div>
+        <div class="arch-panels">
+          <div class="arch-panel active" id="arch-meditation">
+            <div class="arch-info"><h4>核心专注场景</h4><ul><li>番茄钟计时器（15/25/45分钟）</li><li>角色打坐动画（随冥想状态变化）</li><li>城市场景背景 + 环境白噪音</li><li>碎片进度条</li><li>完成后碎片飞入动画</li></ul></div>
+          </div>
+          <div class="arch-panel" id="arch-map">
+            <div class="arch-info"><h4>旅行进度可视化</h4><ul><li>丝绸之路10城路线图</li><li>迷雾覆盖/解锁动画</li><li>城市节点4种状态（已完成/当前/待解锁/远期）</li><li>点击城市查看详情卡片</li></ul></div>
+          </div>
+          <div class="arch-panel" id="arch-journal">
+            <div class="arch-info"><h4>收集物展示</h4><ul><li>按城市分页展示</li><li>三类收集物：风景/美食/卷轴</li><li>图鉴进度追踪</li><li>已收集物可查看详情描述</li></ul></div>
+          </div>
+          <div class="arch-panel" id="arch-profile">
+            <div class="arch-info"><h4>个人数据中心</h4><ul><li>累计专注时长 / 番茄数</li><li>当前位置和旅行进度</li><li>收集物完成度</li><li>设置与关于</li></ul></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-card" data-aos="fade-up">
+        <h3>4.3 碎片获取与城市解锁规则</h3>
+        <table class="styled-table">
+          <thead><tr><th>规则项</th><th>MVP设定</th><th>设计意图</th></tr></thead>
+          <tbody>
+            <tr><td>每次完成冥想获得</td><td><strong>1个碎片/次</strong>（不区分时长）</td><td>简化规则，降低理解成本</td></tr>
+            <tr><td>解锁一个城市所需</td><td><strong>4个碎片</strong></td><td>约2天可解锁1城，2-3周走完全程</td></tr>
+            <tr><td>碎片上限</td><td><strong>无上限，不过期</strong></td><td>不惩罚用户，断续使用不丢失进度</td></tr>
+          </tbody>
+        </table>
+        <div class="design-note">📌 <strong>设计备注：</strong>V1.1计划引入"时长加成"——15分钟=1碎片、25分钟=2碎片、45分钟=4碎片。MVP优先验证核心假设，暂不引入复杂规则。</div>
+      </div>
+    </section>
+
+    <!-- ===== 第5章 ===== -->
+    <section id="chapter5" class="chapter">
+      <div class="chapter-header">
+        <span class="chapter-number">05</span>
+        <h2 class="chapter-title">功能需求详细设计</h2>
+        <p class="chapter-subtitle">5大模块，每个都为核心循环服务</p>
+      </div>
+
+      <div class="content-card" data-aos="fade-up">
+        <div class="filter-bar">
+          <span class="filter-label">按优先级筛选：</span>
+          <button class="filter-btn active" onclick="filterPriority(this,'all')">全部</button>
+          <button class="filter-btn p0" onclick="filterPriority(this,'P0')">P0 必须有</button>
+          <button class="filter-btn p1" onclick="filterPriority(this,'P1')">P1 应该有</button>
+          <button class="filter-btn p2" onclick="filterPriority(this,'P2')">P2 可以有</button>
+        </div>
+      </div>
+
+      <div class="content-card module-card open" data-aos="fade-up">
+        <div class="module-header" onclick="toggleModule(this)">
+          <span class="module-icon">⏱️</span>
+          <span class="module-name">模块一：番茄钟冥想系统</span>
+          <span class="module-arrow">▼</span>
+        </div>
+        <div class="module-body">
+          <table class="styled-table feature-table">
+            <thead><tr><th>功能点</th><th>优先级</th><th>详细描述</th></tr></thead>
+            <tbody>
+              <tr data-priority="P0"><td>时长选择</td><td><span class="priority-tag p0">P0</span></td><td>支持15/25/45分钟三档，默认25分钟</td></tr>
+              <tr data-priority="P0"><td>计时逻辑</td><td><span class="priority-tag p0">P0</span></td><td>精确倒计时，后台补偿，精度≤±1秒</td></tr>
+              <tr data-priority="P0"><td>暂停/放弃</td><td><span class="priority-tag p0">P0</span></td><td>暂停弹窗确认，放弃需二次确认</td></tr>
+              <tr data-priority="P0"><td>完成反馈</td><td><span class="priority-tag p0">P0</span></td><td>钵声+振动+完成弹窗+碎片发放</td></tr>
+              <tr data-priority="P0"><td>自动休息</td><td><span class="priority-tag p0">P0</span></td><td>完成后自动进入5分钟休息</td></tr>
+              <tr data-priority="P1"><td>屏幕常亮</td><td><span class="priority-tag p1">P1</span></td><td>冥想期间保持屏幕常亮</td></tr>
+              <tr data-priority="P2"><td>呼吸引导</td><td><span class="priority-tag p2">P2</span></td><td>角色胸口光芒引导呼吸节奏</td></tr>
+            </tbody>
+          </table>
+          <div class="ac-section">
+            <h4>🧪 核心验收标准（Acceptance Criteria）</h4>
+            <div class="ac-list">
+              <div class="ac-item"><span class="ac-check">☐</span> 选择25分钟后，倒计时从25:00精确开始，每秒更新</div>
+              <div class="ac-item"><span class="ac-check">☐</span> 切到微信聊天再切回，计时误差≤2秒</div>
+              <div class="ac-item"><span class="ac-check">☐</span> 手机锁屏状态下计时继续</div>
+              <div class="ac-item"><span class="ac-check">☐</span> 计时归零触发振动（200ms）+ 钵声提示音</div>
+              <div class="ac-item"><span class="ac-check">☐</span> 网络断开不影响计时功能</div>
+              <div class="ac-item"><span class="ac-check">☐</span> 暂停总时长超5分钟自动判定放弃</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-card module-card" data-aos="fade-up">
+        <div class="module-header" onclick="toggleModule(this)">
+          <span class="module-icon">🗺️</span>
+          <span class="module-name">模块二：世界地图系统</span>
+          <span class="module-arrow">▶</span>
+        </div>
+        <div class="module-body">
+          <table class="styled-table feature-table">
+            <thead><tr><th>功能点</th><th>优先级</th><th>详细描述</th></tr></thead>
+            <tbody>
+              <tr data-priority="P0"><td>丝绸之路路线</td><td><span class="priority-tag p0">P0</span></td><td>10城固定路线：西安→雷克雅未克</td></tr>
+              <tr data-priority="P0"><td>迷雾机制</td><td><span class="priority-tag p0">P0</span></td><td>未解锁城市被迷雾覆盖，解锁时散开</td></tr>
+              <tr data-priority="P0"><td>城市节点状态</td><td><span class="priority-tag p0">P0</span></td><td>已完成(金)/当前(发光)/待解锁(半透明)/远期(迷雾)</td></tr>
+              <tr data-priority="P1"><td>城市卡片弹窗</td><td><span class="priority-tag p1">P1</span></td><td>点击已解锁城市显示缩略图、进度、回顾入口</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="content-card module-card" data-aos="fade-up">
+        <div class="module-header" onclick="toggleModule(this)">
+          <span class="module-icon">🏛️</span>
+          <span class="module-name">模块三：城市探索系统</span>
+          <span class="module-arrow">▶</span>
+        </div>
+        <div class="module-body">
+          <table class="styled-table feature-table">
+            <thead><tr><th>功能点</th><th>优先级</th><th>详细描述</th></tr></thead>
+            <tbody>
+              <tr data-priority="P0"><td>城市场景展示</td><td><span class="priority-tag p0">P0</span></td><td>每城专属插画+氛围描写</td></tr>
+              <tr data-priority="P0"><td>随机探索事件</td><td><span class="priority-tag p0">P0</span></td><td>每城2-3个事件，含叙事+收集物+知识</td></tr>
+              <tr data-priority="P0"><td>事件完成标记</td><td><span class="priority-tag p0">P0</span></td><td>已完成标记✔，可回顾不重复发奖</td></tr>
+              <tr data-priority="P1"><td>收集物动画</td><td><span class="priority-tag p1">P1</span></td><td>收集物弹入+光效的仪式感</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="content-card module-card" data-aos="fade-up">
+        <div class="module-header" onclick="toggleModule(this)">
+          <span class="module-icon">📖</span>
+          <span class="module-name">模块四：收集与手账系统</span>
+          <span class="module-arrow">▶</span>
+        </div>
+        <div class="module-body">
+          <table class="styled-table">
+            <thead><tr><th>类型</th><th>图标</th><th>数量</th><th>获取方式</th></tr></thead>
+            <tbody>
+              <tr><td>风景照</td><td>🏞</td><td>每城1张，共10张</td><td>到达城市解锁</td></tr>
+              <tr><td>特色美食</td><td>🍜</td><td>每城1-2个，共15个</td><td>探索事件获得</td></tr>
+              <tr><td>哲思卷轴</td><td>📜</td><td>每城1句，共10句</td><td>稀有掉落</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="content-card module-card" data-aos="fade-up">
+        <div class="module-header" onclick="toggleModule(this)">
+          <span class="module-icon">🎵</span>
+          <span class="module-name">模块五：冥想场景与音效系统</span>
+          <span class="module-arrow">▶</span>
+        </div>
+        <div class="module-body">
+          <div class="sound-narrative">
+            <div class="sound-narrative-icon">🎵</div>
+            <div class="sound-narrative-text"><strong>声音叙事弧线设计：</strong>10座城市的环境音从喧嚣到极静，对应用户冥想能力的成长。当用户走完丝绸之路，不仅解锁了10座城市，还完成了一次<mark>"从依赖外部刺激到能在安静中专注"</mark>的冥想成长。声音本身就在讲故事。</div>
+          </div>
+          <table class="styled-table">
+            <thead><tr><th>城市</th><th>冥想场景</th><th>环境白噪音</th><th>声音丰富度</th></tr></thead>
+            <tbody>
+              <tr><td>西安</td><td>城墙上的黄昏</td><td>古城风声+远处钟鼓楼</td><td>████████░░ 丰富</td></tr>
+              <tr><td>敦煌</td><td>鸣沙山月牙泉边</td><td>沙漠风+驼铃</td><td>███████░░░</td></tr>
+              <tr><td>撒马尔罕</td><td>蓝色穹顶广场</td><td>清真寺唤拜+集市远声</td><td>██████░░░░</td></tr>
+              <tr><td>伊斯法罕</td><td>三十三孔桥河畔</td><td>流水+夜虫鸣</td><td>█████░░░░░</td></tr>
+              <tr><td>伊斯坦布尔</td><td>博斯普鲁斯海峡边</td><td>海浪+海鸥+远船笛</td><td>█████░░░░░</td></tr>
+              <tr><td>雅典</td><td>卫城山丘上</td><td>地中海风+蝉鸣</td><td>████░░░░░░</td></tr>
+              <tr><td>罗马</td><td>许愿泉旁小巷</td><td>喷泉水声+鸽子</td><td>███░░░░░░░</td></tr>
+              <tr><td>巴黎</td><td>塞纳河畔长椅</td><td>手风琴+河水+车铃</td><td>███░░░░░░░</td></tr>
+              <tr><td>伦敦</td><td>泰晤士河边雾中</td><td>雨声+大本钟远处报时</td><td>██░░░░░░░░</td></tr>
+              <tr><td>雷克雅未克</td><td>极光下的黑沙滩</td><td>极致安静+偶尔冰裂+风</td><td>█░░░░░░░░░ 极静</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 第6章 ===== -->
+    <section id="chapter6" class="chapter">
+      <div class="chapter-header">
+        <span class="chapter-number">06</span>
+        <h2 class="chapter-title">AI 技术架构与应用设计</h2>
+        <p class="chapter-subtitle">没有AI，这个产品不可能存在</p>
+      </div>
+
+      <div class="content-card" data-aos="fade-up">
+        <h3>6.1 AI 在产品中的核心定位</h3>
+        <div class="insight-box">
+          <div class="insight-icon">🤖</div>
+          <div class="insight-text">心流旅人不是"一个产品加了点AI"，而是<strong>"没有AI就不可能存在的产品"</strong>。AI解决的核心问题是：一个人如何做出内容密集型产品？</div>
+        </div>
+      </div>
+
+      <div class="content-card" data-aos="fade-up">
+        <h3>6.2 内容生产成本对比</h3>
+        <div class="cost-compare" id="costCompare">
+          <div class="cost-column traditional">
+            <div class="cost-header">传统外包方式</div>
+            <div class="cost-items">
+              <div class="cost-row"><span>城市插画 ×10</span><span class="cost-num" data-target="50000">¥0</span></div>
+              <div class="cost-row"><span>角色设计 ×6</span><span class="cost-num" data-target="18000">¥0</span></div>
+              <div class="cost-row"><span>探索文案 ×30</span><span class="cost-num" data-target="15000">¥0</span></div>
+              <div class="cost-row"><span>收集物图鉴 ×35</span><span class="cost-num" data-target="35000">¥0</span></div>
+              <div class="cost-row"><span>文化Brief ×10</span><span class="cost-num" data-target="10000">¥0</span></div>
+            </div>
+            <div class="cost-total"><span>总计</span><span class="cost-total-num" data-target="128000">¥0</span></div>
+            <div class="cost-time">耗时：3-4个月</div>
+          </div>
+          <div class="cost-vs">
+            <div class="vs-arrow">→</div>
+            <div class="vs-label">AI 赋能后</div>
+            <div class="vs-saving">成本降低 <strong>99.9%</strong></div>
+          </div>
+          <div class="cost-column ai">
+            <div class="cost-header">AI 生产方式</div>
+            <div class="cost-items">
+              <div class="cost-row"><span>城市插画 ×10</span><span class="cost-num-ai">≈ ¥50</span></div>
+              <div class="cost-row"><span>角色设计 ×6</span><span class="cost-num-ai">≈ ¥30</span></div>
+              <div class="cost-row"><span>探索文案 ×30</span><span class="cost-num-ai">≈ ¥10</span></div>
+              <div class="cost-row"><span>收集物图鉴 ×35</span><span class="cost-num-ai">≈ ¥35</span></div>
+              <div class="cost-row"><span>文化Brief ×10</span><span class="cost-num-ai">≈ ¥5</span></div>
+            </div>
+            <div class="cost-total ai-total"><span>总计</span><span class="cost-total-num-ai">≈ ¥130</span></div>
+            <div class="cost-time">耗时：约2周</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-card" data-aos="fade-up">
+        <h3>6.3 AI 内容生产 Pipeline</h3>
+        <div class="pipeline-container">
+          <div class="pipeline-title">城市插画生产流程</div>
+          <div class="pipeline-steps">
+            <div class="pipeline-step" onclick="showPipelineDetail(this,0)">
+              <div class="step-number">1</div>
+              <div class="step-name">文化研究</div>
+              <div class="step-detail">查阅城市标志性场景、时间段、天气、情绪关键词。工具：维基百科+旅行攻略。耗时：30min/城市</div>
+            </div>
+            <div class="pipeline-arrow">→</div>
+            <div class="pipeline-step" onclick="showPipelineDetail(this,1)">
+              <div class="step-number">2</div>
+              <div class="step-name">Prompt工程</div>
+              <div class="step-detail">基于研究结果填充Prompt模板，调整风格和色调参数。耗时：15min/城市</div>
+            </div>
+            <div class="pipeline-arrow">→</div>
+            <div class="pipeline-step" onclick="showPipelineDetail(this,2)">
+              <div class="step-number">3</div>
+              <div class="step-name">AI批量生成</div>
+              <div class="step-detail">每个场景生成3-5张候选图。工具：Midjourney V6 / DALL-E 3。耗时：10min/城市</div>
+            </div>
+            <div class="pipeline-arrow">→</div>
+            <div class="pipeline-step" onclick="showPipelineDetail(this,3)">
+              <div class="step-number">4</div>
+              <div class="step-name">人工筛选</div>
+              <div class="step-detail">从候选中选最佳1张。评估标准：情绪匹配度、美术一致性、屏幕适配性。耗时：10min/城市</div>
+            </div>
+            <div class="pipeline-arrow">→</div>
+            <div class="pipeline-step" onclick="showPipelineDetail(this,4)">
+              <div class="step-number">5</div>
+              <div class="step-name">后期统一</div>
+              <div class="step-detail">统一色调（暗色系）、裁切竖屏比例、压缩文件。工具：Photoshop / Figma。耗时：15min/城市</div>
+            </div>
+            <div class="pipeline-arrow">→</div>
+            <div class="pipeline-step" onclick="showPipelineDetail(this,5)">
+              <div class="step-number">6</div>
+              <div class="step-name">入库部署</div>
+              <div class="step-detail">命名规范、目录归档、代码引用配置。耗时：5min/城市</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-card" data-aos="fade-up">
+        <h3>6.4 Prompt 工程实践</h3>
+        <div class="prompt-tabs">
+          <button class="prompt-tab active" onclick="switchPrompt(this,'prompt-image')">🖼️ 城市插画</button>
+          <button class="prompt-tab" onclick="switchPrompt(this,'prompt-text')">📝 探索文案</button>
+          <button class="prompt-tab" onclick="switchPrompt(this,'prompt-char')">☁️ 角色状态</button>
+        </div>
+        <div class="prompt-panels">
+          <div class="prompt-panel active" id="prompt-image">
+            <div class="prompt-label">城市插画 Prompt 模板</div>
+            <pre class="code-block"><code>A serene watercolor illustration of <span class="code-var">{地标名称}</span> in <span class="code-var">{城市}</span>,
+<span class="code-var">{时间段}</span> atmosphere, <span class="code-var">{天气/光线}</span>,
+viewed from <span class="code-var">{视角}</span>,
+Eastern aesthetic meets modern digital illustration,
+soft muted color palette with dominant tones of <span class="code-var">{主色调}</span>,
+suitable as meditation app background,
+vertical composition for mobile phone (9:19.5),
+the bottom 30% gradually fades to dark navy (#0a0e27),
+dreamy, peaceful, contemplative mood.
+--no text, logo, people, modern objects, bright saturated colors</code></pre>
+            <button class="copy-btn" onclick="copyCode(this)">📋 复制</button>
+          </div>
+          <div class="prompt-panel" id="prompt-text">
+            <div class="prompt-label">探索文案 Prompt 模板</div>
+            <pre class="code-block"><code>你是一位温柔的旅行作家，为冥想App撰写城市探索文案。
+
+[城市] <span class="code-var">{城市名}</span>
+[场景] <span class="code-var">{具体地点和情境}</span>
+[文化元素] <span class="code-var">{必须融入的真实文化细节}</span>
+[情绪基调] <span class="code-var">{要传达的情感}</span>
+
+写作要求：
+1. 使用第二人称"你"，身临其境
+2. 3-5句短句，每句不超过15字
+3. 至少融入1个真实文化细节
+4. 结尾留下轻微的情感触动
+5. 语气：温暖但不煽情
+6. 避免感叹号和浮夸表达</code></pre>
+            <button class="copy-btn" onclick="copyCode(this)">📋 复制</button>
+          </div>
+          <div class="prompt-panel" id="prompt-char">
+            <div class="prompt-label">角色状态 Prompt 模板</div>
+            <pre class="code-block"><code>[基础角色描述——所有状态共用]
+A cute Chinese mythical cloud beast (云兽),
+white fluffy body made of curly cloud-like fur
+in soft cyan-blue tones, two small golden horns,
+a tiny golden bell on red cord around neck,
+cloud-wisp tail.
+Art style: traditional Chinese mythology meets
+modern cute illustration, watercolor texture.
+Transparent background, centered, PNG.
+
+[状态变体]
+idle:     sitting upright, big curious eyes
+focus:    cross-legged meditation, eyes closed, faint glow
+complete: jumping joyfully, crescent eyes, sparkles
+sleep:    curled up, peaceful, soft glow
+awake:    big surprised eyes, slightly disheveled fur</code></pre>
+            <button class="copy-btn" onclick="copyCode(this)">📋 复制</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-card" data-aos="fade-up">
+        <h3>6.5 AI 局限性与人工兜底</h3>
+        <table class="styled-table">
+          <thead><tr><th>AI能力</th><th>当前局限</th><th>风险</th><th>兜底策略</th></tr></thead>
+          <tbody>
+            <tr><td>图像风格一致性</td><td>同一Prompt多次结果差异大</td><td><span class="risk-tag high">高</span></td><td>image-to-image保持一致 + 人工后期统一色调</td></tr>
+            <tr><td>文案文化准确性</td><td>LLM可能编造历史细节</td><td><span class="risk-tag high">高</span></td><td>每条文案人工fact-check + 文化核查清单</td></tr>
+            <tr><td>文案情感温度</td><td>AI文案偏模板化</td><td><span class="risk-tag medium">中</span></td><td>AI初稿 + 人工润色30-50%；关键城市100%人工</td></tr>
+            <tr><td>音频生成</td><td>AI环境音质量不达标</td><td><span class="risk-tag high">高</span></td><td>放弃AI生成，购买授权素材库</td></tr>
+            <tr><td>图片去背景</td><td>自动去背景可能留毛边</td><td><span class="risk-tag low">低</span></td><td>remove.bg + 手动修边</td></tr>
+          </tbody>
+        </table>
+        <div class="insight-box" style="margin-top:20px">
+          <div class="insight-icon">💡</div>
+          <div class="insight-text"><strong>核心原则：</strong>AI负责"量"，人工负责"质"。AI将80%的重复劳动自动化，人工专注于那20%需要审美判断和文化理解的工作。</div>
+        </div>
+      </div>
+
+      <div class="content-card" data-aos="fade-up">
+        <h3>6.6 AI 能力演进规划</h3>
+        <div class="evolution-timeline">
+          <div class="evo-item current">
+            <div class="evo-version">MVP</div>
+            <div class="evo-content"><div class="evo-title">离线内容生产</div><div class="evo-desc">Midjourney + GPT-4 生成全部视觉素材和文案</div></div>
+          </div>
+          <div class="evo-item">
+            <div class="evo-version">V1.5</div>
+            <div class="evo-content"><div class="evo-title">卷轴参悟生成</div><div class="evo-desc">LLM根据冥想数据生成个性化哲思短句</div></div>
+          </div>
+          <div class="evo-item">
+            <div class="evo-version">V2.0</div>
+            <div class="evo-content"><div class="evo-title">智能混音 + 个性化推荐</div><div class="evo-desc">动态混合白噪音元素；推荐最佳冥想时长/场景</div></div>
+          </div>
+          <div class="evo-item">
+            <div class="evo-version">V3.0</div>
+            <div class="evo-content"><div class="evo-title">动态叙事生成</div><div class="evo-desc">LLM根据用户行为生成个性化城市探索剧情</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 第7章 ===== -->
+    <section id="chapter7" class="chapter">
+      <div class="chapter-header">
+        <span class="chapter-number">07</span>
+        <h2 class="chapter-title">非功能需求</h2>
+        <p class="chapter-subtitle">性能、体验、视觉的底线标准</p>
+      </div>
+
+      <div class="content-card" data-aos="fade-up">
+        <h3>7.1 性能需求</h3>
+        <table class="styled-table">
+          <thead><tr><th>指标</th><th>目标值</th><th>说明</th></tr></thead>
+          <tbody>
+            <tr><td>首屏加载</td><td><strong>≤ 1.5秒</strong></td><td>含场景图加载</td></tr>
+            <tr><td>计时器精度</td><td><strong>≤ ±1秒</strong></td><td>含后台补偿场景</td></tr>
+            <tr><td>场景切换</td><td><strong>≤ 300ms</strong></td><td>含背景图+音频</td></tr>
+            <tr><td>音频延迟</td><td><strong>≤ 200ms</strong></td><td>点击到可闻</td></tr>
+            <tr><td>存储读写</td><td><strong>≤ 50ms</strong></td><td>不影响交互流畅</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="content-card" data-aos="fade-up">
+        <h3>7.2 体验设计原则</h3>
+        <div class="principle-grid">
+          <div class="principle-item"><div class="principle-icon">🌊</div><div class="principle-name">沉浸感优先</div><div class="principle-desc">冥想期间隐藏所有非必要UI</div></div>
+          <div class="principle-item"><div class="principle-icon">✍️</div><div class="principle-name">轻量文本交互</div><div class="principle-desc">短文本叙事为主，成本低体验暖</div></div>
+          <div class="principle-item"><div class="principle-icon">🎁</div><div class="principle-name">渐进式惊喜</div><div class="principle-desc">内容逐渐开放，避免信息过载</div></div>
+          <div class="principle-item"><div class="principle-icon">🔄</div><div class="principle-name">正向反馈循环</div><div class="principle-desc">每次专注必有可感知的进展</div></div>
+          <div class="principle-item"><div class="principle-icon">🤝</div><div class="principle-name">尊重用户时间</div><div class="principle-desc">不惩罚，断续使用不丢失进度</div></div>
+        </div>
+      </div>
+
+      <div class="content-card" data-aos="fade-up">
+        <h3>7.3 视觉设计规范</h3>
+        <div class="color-palette">
+          <div class="color-item"><div class="color-swatch" style="background:#6C63FF"></div><div class="color-name">主色 · 深紫</div><div class="color-hex">#6C63FF</div></div>
+          <div class="color-item"><div class="color-swatch" style="background:#F5C842"></div><div class="color-name">强调 · 金色</div><div class="color-hex">#F5C842</div></div>
+          <div class="color-item"><div class="color-swatch" style="background:#0A0E27"></div><div class="color-name">底色 · 深夜蓝黑</div><div class="color-hex">#0A0E27</div></div>
+          <div class="color-item"><div class="color-swatch" style="background:#E2E8F0"></div><div class="color-name">文字 · 浅灰白</div><div class="color-hex">#E2E8F0</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 第8章 ===== -->
+    <section id="chapter8" class="chapter">
+      <div class="chapter-header">
+        <span class="chapter-number">08</span>
+        <h2 class="chapter-title">内容架构与丝绸之路城市设计</h2>
+        <p class="chapter-subtitle">10座城市，30个故事，35件收集物</p>
+      </div>
+
+      <div class="content-card" data-aos="fade-up">
+        <h3>8.1 MVP路线：丝绸之路</h3>
+        <div class="silk-road-map">
+          <div class="city-node"><div class="city-dot gold"></div><div class="city-name">西安</div><div class="city-sub">千年古都</div></div>
+          <div class="city-line"></div>
+          <div class="city-node"><div class="city-dot gold"></div><div class="city-name">敦煌</div><div class="city-sub">大漠明珠</div></div>
+          <div class="city-line"></div>
+          <div class="city-node"><div class="city-dot"></div><div class="city-name">撒马尔罕</div><div class="city-sub">蓝色穹顶之城</div></div>
+          <div class="city-line"></div>
+          <div class="city-node"><div class="city-dot"></div><div class="city-name">伊斯法罕</div><div class="city-sub">半天下之城</div></div>
+          <div class="city-line"></div>
+          <div class="city-node"><div class="city-dot"></div><div class="city-name">伊斯坦布尔</div><div class="city-sub">横跨欧亚</div></div>
+          <div class="city-line"></div>
+          <div class="city-node"><div class="city-dot"></div><div class="city-name">雅典</div><div class="city-sub">智慧之城</div></div>
+          <div class="city-line"></div>
+          <div class="city-node"><div class="city-dot"></div><div class="city-name">罗马</div><div class="city-sub">永恒之城</div></div>
+          <div class="city-line"></div>
+          <div class="city-node"><div class="city-dot"></div><div class="city-name">巴黎</div><div class="city-sub">光之城</div></div>
+          <div class="city-line"></div>
+          <div class="city-node"><div class="city-dot"></div><div class="city-name">伦敦</div><div class="city-sub">雾都</div></div>
+          <div class="city-line"></div>
+          <div class="city-node"><div class="city-dot"></div><div class="city-name">雷克雅未克</div><div class="city-sub">世界尽头</div></div>
+        </div>
+      </div>
+
+      <div class="content-card" data-aos="fade-up">
+        <h3>8.2 城市内容总量</h3>
+        <table class="styled-table">
+          <thead><tr><th>序号</th><th>城市</th><th>副标题</th><th>探索事件</th><th>收集物</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>西安</td><td>千年古都，丝路起点</td><td>3个</td><td>4件</td></tr>
+            <tr><td>2</td><td>敦煌</td><td>大漠明珠，飞天故乡</td><td>3个</td><td>3件</td></tr>
+            <tr><td>3</td><td>撒马尔罕</td><td>蓝色穹顶之城</td><td>3个</td><td>3件</td></tr>
+            <tr><td>4</td><td>伊斯法罕</td><td>半天下之城</td><td>3个</td><td>4件</td></tr>
+            <tr><td>5</td><td>伊斯坦布尔</td><td>横跨欧亚的千年之城</td><td>3个</td><td>4件</td></tr>
+            <tr><td>6</td><td>雅典</td><td>智慧之城，哲学的故乡</td><td>3个</td><td>3件</td></tr>
+            <tr><td>7</td><td>罗马</td><td>永恒之城，万城之城</td><td>3个</td><td>4件</td></tr>
+            <tr><td>8</td><td>巴黎</td><td>光之城，浪漫之都</td><td>3个</td><td>3件</td></tr>
+            <tr><td>9</td><td>伦敦</td><td>雾都，日不落的帝国之心</td><td>3个</td><td>4件</td></tr>
+            <tr><td>10</td><td>雷克雅未克</td><td>世界尽头，极光之地</td><td>3个</td><td>3件</td></tr>
+          </tbody>
+          <tfoot><tr><td colspan="3"><strong>合计</strong></td><td><strong>30个事件</strong></td><td><strong>35件收集物</strong></td></tr></tfoot>
+        </table>
+      </div>
+
+      <div class="content-card" data-aos="fade-up">
+        <h3>8.3 内容生产策略</h3>
+        <table class="styled-table">
+          <thead><tr><th>内容类型</th><th>生产方式</th><th>质量保障</th></tr></thead>
+          <tbody>
+            <tr><td>城市插画</td><td>AI图像生成（统一水彩风格Prompt）</td><td>人工审核美术一致性</td></tr>
+            <tr><td>探索文案</td><td>AI文本生成 + 人工润色</td><td>确保文化准确性和情感温度</td></tr>
+            <tr><td>趣味知识</td><td>AI生成 + 事实核查</td><td>确保数据精确性</td></tr>
+            <tr><td>环境白噪音</td><td>购买授权素材 + AI混音</td><td>确保音质和循环无缝</td></tr>
+            <tr><td>角色设计</td><td>AI图像生成（统一角色Prompt）</td><td>多状态风格一致性校验</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ===== 第9章 ===== -->
+    <section id="chapter9" class="chapter">
+      <div class="chapter-header">
+        <span class="chapter-number">09</span>
+        <h2 class="chapter-title">数据埋点与指标体系</h2>
+        <p class="chapter-subtitle">做MVP就是为了验证假设，数据比功能更重要</p>
+      </div>
+
+      <div class="content-card" data-aos="fade-up">
+        <h3>9.1 核心埋点设计</h3>
+        <table class="styled-table">
+          <thead><tr><th>埋点事件</th><th>采集数据</th><th>分析目标</th></tr></thead>
+          <tbody>
+            <tr><td>冥想开始</td><td>时长选择、当前城市、时间段</td><td>使用时段偏好、时长偏好</td></tr>
+            <tr><td>冥想完成/放弃</td><td>完成率、放弃时刻、当日第N个</td><td>完成率、放弃高峰时段</td></tr>
+            <tr><td>城市解锁</td><td>城市ID、消耗总番茄数</td><td>各城市解锁转化漏斗</td></tr>
+            <tr><td>探索事件点击</td><td>事件ID、停留时长、是否收集</td><td>哪类事件最受欢迎</td></tr>
+            <tr><td>手账查看</td><td>查看频率、停留时长、查看城市</td><td>用户是否回看手账</td></tr>
+            <tr><td>地图交互</td><td>点击城市、滑动范围、停留时长</td><td>地图对用户的吸引力</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="content-card" data-aos="fade-up">
+        <h3>9.2 核心假设验证漏斗</h3>
+        <div class="conversion-funnel" id="conversionFunnel">
+          <div class="funnel-step" data-width="100">
+            <div class="funnel-step-bar"><span class="funnel-step-label">L1 新用户注册</span><span class="funnel-step-pct">100%</span></div>
+            <div class="funnel-step-note">完成序章，唤醒云宝</div>
+          </div>
+          <div class="funnel-step" data-width="80">
+            <div class="funnel-step-bar"><span class="funnel-step-label">L2 首次冥想</span><span class="funnel-step-pct">≥ 80%</span></div>
+            <div class="funnel-step-note">完成第1个番茄钟</div>
+          </div>
+          <div class="funnel-step" data-width="70">
+            <div class="funnel-step-bar highlight-step"><span class="funnel-step-label">L3 首次解锁 ⭐</span><span class="funnel-step-pct">≥ 70%</span></div>
+            <div class="funnel-step-note">解锁第2城（敦煌）— 核心假设验证点</div>
+          </div>
+          <div class="funnel-step" data-width="40">
+            <div class="funnel-step-bar"><span class="funnel-step-label">L4 中期留存</span><span class="funnel-step-pct">≥ 40%</span></div>
+            <div class="funnel-step-note">解锁第5城（伊斯坦布尔）</div>
+          </div>
+          <div class="funnel-step" data-width="20">
+            <div class="funnel-step-bar"><span class="funnel-step-label">L5 全程完成</span><span class="funnel-step-pct">≥ 20%</span></div>
+            <div class="funnel-step-note">解锁第10城（雷克雅未克）</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-card" data-aos="fade-up">
+        <h3>9.3 数据驱动的迭代决策</h3>
+        <div class="decision-grid">
+          <div class="decision-card">
+            <div class="decision-signal">📉 L2→L3 转化率 &lt; 50%</div>
+            <div class="decision-diagnosis">首城（西安）探索内容不够吸引，或碎片门槛太高</div>
+            <div class="decision-action"><span class="action-tag">优化西安事件文案</span><span class="action-tag">解锁门槛从4降为3碎片</span></div>
+          </div>
+          <div class="decision-card">
+            <div class="decision-signal">📉 L3→L4 之间流失加速</div>
+            <div class="decision-diagnosis">中段城市内容疲劳，新鲜感衰减</div>
+            <div class="decision-action"><span class="action-tag">第4-5城插入剧情转折</span><span class="action-tag">引入新收集物类型</span></div>
+          </div>
+          <div class="decision-card">
+            <div class="decision-signal">📉 单次冥想完成率 &lt; 70%</div>
+            <div class="decision-diagnosis">冥想体验本身有问题</div>
+            <div class="decision-action"><span class="action-tag">默认推荐15分钟</span><span class="action-tag">优化白噪音质量</span><span class="action-tag">增加呼吸引导</span></div>
+          </div>
+          <div class="decision-card">
+            <div class="decision-signal">📉 手账查看率 &lt; 20%</div>
+            <div class="decision-diagnosis">收集物对用户没有吸引力</div>
+            <div class="decision-action"><span class="action-tag">提升收集物视觉品质</span><span class="action-tag">增加收集物互动玩法</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-card" data-aos="fade-up">
+        <h3>9.4 核心指标看板</h3>
+        <table class="styled-table">
+          <thead><tr><th>分类</th><th>指标名称</th><th>目标值</th><th>计算方式</th></tr></thead>
+          <tbody>
+            <tr><td>增长</td><td>DAU</td><td>—</td><td>日活跃用户数</td></tr>
+            <tr><td>留存</td><td>次日留存率</td><td><strong>≥ 40%</strong></td><td>第2天返回 / 新增</td></tr>
+            <tr><td>留存</td><td>7日留存率</td><td><strong>≥ 25%</strong></td><td>第7天返回 / 新增</td></tr>
+            <tr><td>活跃</td><td>日均番茄数</td><td><strong>≥ 3个</strong></td><td>完成总数 / DAU</td></tr>
+            <tr><td>活跃</td><td>日均专注时长</td><td><strong>≥ 50min</strong></td><td>专注总时长 / DAU</td></tr>
+            <tr><td>核心</td><td>城市解锁率(第2城)</td><td><strong>≥ 70%</strong></td><td>解锁第2城 / 解锁第1城</td></tr>
+            <tr><td>核心</td><td>全程完成率</td><td><strong>≥ 20%</strong></td><td>解锁第10城 / 总用户</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ===== 第10章 ===== -->
+    <section id="chapter10" class="chapter">
+      <div class="chapter-header">
+        <span class="chapter-number">10</span>
+        <h2 class="chapter-title">商业模式与变现设计</h2>
+        <p class="chapter-subtitle">MVP不变现，但要想清楚怎么赚钱</p>
+      </div>
+
+      <div class="content-card" data-aos="fade-up">
+        <h3>10.1 免费与付费边界</h3>
+        <div class="pricing-compare">
+          <div class="pricing-column free">
+            <div class="pricing-header">🆓 免费版</div>
+            <div class="pricing-subtitle">完整体验，不阉割</div>
+            <ul class="pricing-list">
+              <li>✅ 丝绸之路全线10城市</li>
+              <li>✅ 全部30个探索事件</li>
+              <li>✅ 全部35个收集物</li>
+              <li>✅ 基础环境白噪音</li>
+              <li>✅ 旅行手账完整功能</li>
+            </ul>
+            <div class="pricing-principle">设计原则：免费版体验完整</div>
+          </div>
+          <div class="pricing-column premium">
+            <div class="pricing-header">👑 会员版 <span class="pricing-price">15元/月</span></div>
+            <div class="pricing-subtitle">锦上添花，更多惊喜</div>
+            <ul class="pricing-list">
+              <li>⭐ 新路线：海上丝路、北极线</li>
+              <li>⭐ 高级白噪音混音台</li>
+              <li>⭐ 限定收集物 & 季节活动</li>
+              <li>⭐ 手账导出高清PDF</li>
+              <li>⭐ 角色额外装扮</li>
+            </ul>
+            <div class="pricing-principle">绝不做"付费才能解锁下一城"</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-card" data-aos="fade-up">
+        <h3>10.2 简易财务模型</h3>
+        <div class="finance-model">
+          <div class="finance-row"><span class="finance-label">目标月活（6个月）</span><span class="finance-value">10万</span></div>
+          <div class="finance-row"><span class="finance-label">付费转化率</span><span class="finance-value">5%</span></div>
+          <div class="finance-row"><span class="finance-label">ARPU（月均）</span><span class="finance-value">¥15</span></div>
+          <div class="finance-divider"></div>
+          <div class="finance-row highlight"><span class="finance-label">月收入</span><span class="finance-value">10万 × 5% × ¥15 = <strong>¥7.5万</strong></span></div>
+          <div class="finance-row highlight"><span class="finance-label">年化收入</span><span class="finance-value"><strong>≈ ¥90万</strong></span></div>
+        </div>
+      </div>
+
+      <div class="content-card" data-aos="fade-up">
+        <h3>10.3 增长策略</h3>
+        <div class="growth-grid">
+          <div class="growth-card"><div class="growth-icon">💌</div><div class="growth-title">社交裂变</div><div class="growth-desc">手账分享朋友圈、明信片寄给好友，未下载用户也可收到精美图片</div></div>
+          <div class="growth-card"><div class="growth-icon">📸</div><div class="growth-title">内容营销</div><div class="growth-desc">城市探索内容本身是优质文化科普，可在小红书/抖音二次传播</div></div>
+          <div class="growth-card"><div class="growth-icon">🔥</div><div class="growth-title">习惯养成</div><div class="growth-desc">"连续旅行日"机制鼓励日常活跃，形成习惯后自然安利</div></div>
+          <div class="growth-card"><div class="growth-icon">👥</div><div class="growth-title">弱社交粘性</div><div class="growth-desc">陌生旅人印记碎片——无社交压力但有情感连接</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 第11章 ===== -->
+    <section id="chapter11" class="chapter">
+      <div class="chapter-header">
+        <span class="chapter-number">11</span>
+        <h2 class="chapter-title">版本迭代规划</h2>
+        <p class="chapter-subtitle">从验证假设到规模化增长的路线图</p>
+      </div>
+
+      <div class="content-card" data-aos="fade-up">
+        <h3>11.1 迭代路线图</h3>
+        <div class="roadmap-timeline">
+          <div class="roadmap-item current">
+            <div class="roadmap-version">MVP v0.1</div>
+            <div class="roadmap-time">6-8周</div>
+            <div class="roadmap-content">
+              <div class="roadmap-title">核心体验验证</div>
+              <ul><li>番茄钟 + 碎片收集</li><li>世界地图 + 迷雾解锁</li><li>城市探索 + 收集物</li><li>场景音效联动</li></ul>
+              <div class="roadmap-goal">目标：验证"好奇心驱动专注"</div>
+            </div>
+          </div>
+          <div class="roadmap-item">
+            <div class="roadmap-version">V1.1</div>
+            <div class="roadmap-time">+3周</div>
+            <div class="roadmap-content">
+              <div class="roadmap-title">内容扩展</div>
+              <ul><li>新增1-2条路线</li><li>时长加成机制</li></ul>
+              <div class="roadmap-goal">目标：验证内容扩展模型</div>
+            </div>
+          </div>
+          <div class="roadmap-item">
+            <div class="roadmap-version">V1.5</div>
+            <div class="roadmap-time">+4周</div>
+            <div class="roadmap-content">
+              <div class="roadmap-title">社交体验</div>
+              <ul><li>印记系统</li><li>陌生旅人碎片</li><li>卷轴参悟机制</li></ul>
+              <div class="roadmap-goal">目标：验证弱社交假设</div>
+            </div>
+          </div>
+          <div class="roadmap-item">
+            <div class="roadmap-version">V2.0</div>
+            <div class="roadmap-time">+6周</div>
+            <div class="roadmap-content">
+              <div class="roadmap-title">体验闭环</div>
+              <ul><li>明信片 + 声音瓶</li><li>AI推荐 + 智能混音</li><li>会员订阅上线</li></ul>
+              <div class="roadmap-goal">目标：完善体验 + 开始变现</div>
+            </div>
+          </div>
+          <div class="roadmap-item">
+            <div class="roadmap-version">V3.0</div>
+            <div class="roadmap-time">+8周</div>
+            <div class="roadmap-content">
+              <div class="roadmap-title">规模化增长</div>
+              <ul><li>心灵小屋 + 完整社交</li><li>品牌合作 + UGC</li><li>动态叙事生成</li></ul>
+              <div class="roadmap-goal">目标：商业化 + 增长飞轮</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-card" data-aos="fade-up">
+        <h3>11.2 MVP功能取舍矩阵</h3>
+        <div class="matrix-container">
+          <div class="matrix-quadrant q1">
+            <div class="matrix-label">✅ MVP必须有</div>
+            <div class="matrix-sub">高重要 · 低成本</div>
+            <div class="matrix-items"><span class="matrix-tag">番茄钟冥想</span><span class="matrix-tag">碎片→解锁</span><span class="matrix-tag">世界地图迷雾</span><span class="matrix-tag">探索事件</span><span class="matrix-tag">基础收集物</span><span class="matrix-tag">场景音效</span></div>
+          </div>
+          <div class="matrix-quadrant q2">
+            <div class="matrix-label">⏳ V1.5 加入</div>
+            <div class="matrix-sub">高重要 · 高成本</div>
+            <div class="matrix-items"><span class="matrix-tag">印记系统</span><span class="matrix-tag">旅人碎片</span><span class="matrix-tag">明信片社交</span><span class="matrix-tag">声音瓶混音台</span></div>
+          </div>
+          <div class="matrix-quadrant q3">
+            <div class="matrix-label">💡 可考虑</div>
+            <div class="matrix-sub">低重要 · 低成本</div>
+            <div class="matrix-items"><span class="matrix-tag">连续旅行日</span><span class="matrix-tag">成就徽章</span></div>
+          </div>
+          <div class="matrix-quadrant q4">
+            <div class="matrix-label">🔮 远期规划</div>
+            <div class="matrix-sub">低重要 · 高成本</div>
+            <div class="matrix-items"><span class="matrix-tag">心灵小屋</span><span class="matrix-tag">美食投喂</span><span class="matrix-tag">季节限定</span><span class="matrix-tag">天气联动</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 第12章 ===== -->
+    <section id="chapter12" class="chapter">
+      <div class="chapter-header">
+        <span class="chapter-number">12</span>
+        <h2 class="chapter-title">技术架构与开发规划</h2>
+        <p class="chapter-subtitle">小团队6-8周，一个人10-12周</p>
+      </div>
+
+      <div class="content-card" data-aos="fade-up">
+        <h3>12.1 技术选型</h3>
+        <table class="styled-table">
+          <thead><tr><th>层面</th><th>技术方案</th><th>选择理由</th></tr></thead>
+          <tbody>
+            <tr><td>前端平台</td><td>微信小程序原生开发</td><td>无需应用商店审核，自带社交传播</td></tr>
+            <tr><td>后端服务</td><td>微信云开发（云数据库+云函数）</td><td>Serverless，零运维成本</td></tr>
+            <tr><td>状态管理</td><td>全局Store + 本地缓存优先</td><td>轻量级方案</td></tr>
+            <tr><td>动画引擎</td><td>CSS Animation + wx.createAnimation</td><td>纯前端，不依赖第三方</td></tr>
+            <tr><td>音频播放</td><td>InnerAudioContext 原生API</td><td>兼容性最佳</td></tr>
+            <tr><td>AI内容</td><td>图像生成 + LLM文本生成</td><td>离线生产，内置于内容包</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="content-card" data-aos="fade-up">
+        <h3>12.2 开发工作量估算</h3>
+        <div class="workload-chart" id="workloadChart">
+          <div class="workload-item"><div class="workload-label">UI/UX设计</div><div class="workload-bar-container"><div class="workload-bar" style="--target-width:25%"></div></div><div class="workload-time">2-3周</div></div>
+          <div class="workload-item"><div class="workload-label">城市场景插画</div><div class="workload-bar-container"><div class="workload-bar" style="--target-width:25%"></div></div><div class="workload-time">2-3周</div></div>
+          <div class="workload-item"><div class="workload-label">角色设计+动效</div><div class="workload-bar-container"><div class="workload-bar" style="--target-width:8%"></div></div><div class="workload-time">1周</div></div>
+          <div class="workload-item"><div class="workload-label">番茄钟核心功能</div><div class="workload-bar-container"><div class="workload-bar" style="--target-width:8%"></div></div><div class="workload-time">1周</div></div>
+          <div class="workload-item"><div class="workload-label">地图+解锁系统</div><div class="workload-bar-container"><div class="workload-bar" style="--target-width:17%"></div></div><div class="workload-time">1-2周</div></div>
+          <div class="workload-item"><div class="workload-label">探索事件系统</div><div class="workload-bar-container"><div class="workload-bar" style="--target-width:8%"></div></div><div class="workload-time">1周</div></div>
+          <div class="workload-item"><div class="workload-label">收集+手账系统</div><div class="workload-bar-container"><div class="workload-bar" style="--target-width:8%"></div></div><div class="workload-time">1周</div></div>
+          <div class="workload-item"><div class="workload-label">数据存储+埋点</div><div class="workload-bar-container"><div class="workload-bar" style="--target-width:8%"></div></div><div class="workload-time">1周</div></div>
+          <div class="workload-item"><div class="workload-label">内容填充</div><div class="workload-bar-container"><div class="workload-bar" style="--target-width:17%"></div></div><div class="workload-time">1-2周</div></div>
+          <div class="workload-item"><div class="workload-label">测试与打磨</div><div class="workload-bar-container"><div class="workload-bar" style="--target-width:8%"></div></div><div class="workload-time">1周</div></div>
+        </div>
+        <div class="workload-summary"><p>小团队（2-3人）：约 <strong>6-8周</strong> ｜ 独立开发者：约 <strong>10-12周</strong></p></div>
+      </div>
+    </section>
+
+    <!-- ===== 第13章 ===== -->
+    <section id="chapter13" class="chapter">
+      <div class="chapter-header">
+        <span class="chapter-number">13</span>
+        <h2 class="chapter-title">风险评估与应对策略</h2>
+        <p class="chapter-subtitle">提前识别风险，准备好Plan B</p>
+      </div>
+
+      <div class="content-card" data-aos="fade-up">
+        <table class="styled-table">
+          <thead><tr><th>风险类型</th><th>风险描述</th><th>影响</th><th>应对策略</th></tr></thead>
+          <tbody>
+            <tr><td>产品风险</td><td>探索玩法可能分散专注初衷</td><td><span class="risk-tag high">高</span></td><td>探索严格限制在休息时段，冥想期间不可操作</td></tr>
+            <tr><td>内容风险</td><td>城市内容量大，生产成本高</td><td><span class="risk-tag medium">中</span></td><td>AI生成+人工审核，MVP只做10城市</td></tr>
+            <tr><td>竞争风险</td><td>大厂模仿同类产品</td><td><span class="risk-tag medium">中</span></td><td>内容壁垒+文化深度+社区粘性构成护城河</td></tr>
+            <tr><td>留存风险</td><td>用户走完10城后流失</td><td><span class="risk-tag high">高</span></td><td>结束后解锁彩蛋世界+提前通过埋点规划新路线</td></tr>
+            <tr><td>技术风险</td><td>小程序包大小受限</td><td><span class="risk-tag low">低</span></td><td>场景图云存储+懒加载，音频流式播放</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ===== 附录 ===== -->
+    <section id="appendix" class="chapter">
+      <div class="chapter-header">
+        <span class="chapter-number">📱</span>
+        <h2 class="chapter-title">产品成果展示</h2>
+        <p class="chapter-subtitle">这不只是一份PRD——我已独立完成MVP开发</p>
+      </div>
+
+      <div class="content-card" data-aos="fade-up">
+        <div class="demo-highlight">
+          <div class="demo-badge">🚀 不只是文档</div>
+          <p>本PRD已同步完成产品原型开发，使用 <strong>React Native + Expo</strong> 构建，<strong>AI生成全部视觉素材和文案内容</strong>。以下为实际运行截图：</p>
+        </div>
+      </div>
+
+      <div class="content-card" data-aos="fade-up">
+        <h3>应用截图</h3>
+        <div class="screenshot-gallery">
+          <div class="screenshot-item">
+            <div class="phone-mockup"><div class="phone-screen"><div class="screenshot-placeholder"><span>序章 · 云宝苏醒</span><small>放置截图 screenshot-1.png</small></div></div></div>
+            <div class="screenshot-label">序章引导</div>
+          </div>
+          <div class="screenshot-item">
+            <div class="phone-mockup"><div class="phone-screen"><div class="screenshot-placeholder"><span>首页 · 冥想打坐</span><small>放置截图 screenshot-2.png</small></div></div></div>
+            <div class="screenshot-label">冥想主页</div>
+          </div>
+          <div class="screenshot-item">
+            <div class="phone-mockup"><div class="phone-screen"><div class="screenshot-placeholder"><span>地图 · 丝绸之路</span><small>放置截图 screenshot-3.png</small></div></div></div>
+            <div class="screenshot-label">世界地图</div>
+          </div>
+          <div class="screenshot-item">
+            <div class="phone-mockup"><div class="phone-screen"><div class="screenshot-placeholder"><span>手账 · 收集物</span><small>放置截图 screenshot-4.png</small></div></div></div>
+            <div class="screenshot-label">旅行手账</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-card" data-aos="fade-up">
+        <h3>技术栈</h3>
+        <div class="tech-stack">
+          <div class="tech-item"><div class="tech-icon">⚛️</div><div class="tech-name">React Native</div><div class="tech-desc">跨平台框架</div></div>
+          <div class="tech-item"><div class="tech-icon">📦</div><div class="tech-name">Expo</div><div class="tech-desc">开发工具链</div></div>
+          <div class="tech-item"><div class="tech-icon">🎨</div><div class="tech-name">Midjourney</div><div class="tech-desc">AI视觉素材</div></div>
+          <div class="tech-item"><div class="tech-icon">🤖</div><div class="tech-name">GPT-4 / Claude</div><div class="tech-desc">AI文案+代码</div></div>
+          <div class="tech-item"><div class="tech-icon">🗄️</div><div class="tech-name">Zustand</div><div class="tech-desc">状态管理</div></div>
+          <div class="tech-item"><div class="tech-icon">🧭</div><div class="tech-name">React Navigation</div><div class="tech-desc">路由导航</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 页脚 ===== -->
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-brand"><span class="footer-logo">🧭</span><span class="footer-name">心流旅人 SoulTraveler</span></div>
+        <div class="footer-meta"><p>产品需求文档 V1.0 · MVP阶段</p><p>文档性质：AI产品经理作品集</p></div>
+        <div class="footer-links"><a href="#hero" class="footer-link">返回顶部 ↑</a></div>
+      </div>
+      <div class="footer-copyright">© 2025 心流旅人. 本文档仅用于作品集展示。</div>
+    </footer>
+
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
